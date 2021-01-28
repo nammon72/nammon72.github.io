@@ -3,7 +3,6 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .hero-image {
     background-image: url("../images/photographer.jpg");
     background-color: #cccccc;
@@ -20,7 +19,18 @@ body {
     transform: translate(-50%, -50%);
     color: white;
 }
+.youtube {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    /* border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; */
+    width: 300px;
+}
 h1 {
-    font-size: 25px;
-    color: #00aeef;
+    font-size: 50px;
 }
