@@ -6,6 +6,11 @@ body {
 
 .hero-image {
     background-image: url("../images/photographer.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: relative;
 }
 
 h1 {
