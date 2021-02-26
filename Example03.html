@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Example 03 - Popup Alert</title>
+</head>
+<body>
+	<h1 style="text-align: center; color: pink"></h1>
+	<button>click</button>
+	<script type="text/javascript">
+		var h1 = document.getElementByTagName('h1');
+		h1 = h1[0];
+		bt = bt[0];
+		console.log(bt);
+		bt.onclick = function() {
+			var x = prompt('Nhập giá trị cần xuất!');
+			if(x == null || x == "") {
+				for(;x==null || x=="") {
+					x = prompt('Bạn phải nhập giá trị!');
+					h1.innerHTML = "Dữ liệu bạn đã nhập là: " +x;
+				}
+			}
+			else {
+				h1.innerHTML = "Dữ liệu bạn đã nhập là: " +x;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -4,18 +4,23 @@ var sex = true;
 if (sex == true ) {
     sex = "Male"
 } else {
-    sex = "Famale"
+    sex = "Female"
 }
 
 function hireMe() {
     alert("Nguyễn Hoàng Nam, phone: 0981554491")
 }
 
-// Price freeship
+// Price freeShip
 var price = 28.99;
 var discount = 10;
 var total = 
         price - (price * (discount / 100));
+
+function freeShipping() {
+
+}
+
 if (total > 25) {
     freeShipping();
 }
