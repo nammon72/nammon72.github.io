@@ -17,7 +17,7 @@ function render(row,column) {
 }
 // Function palygame
 // get value input[type=text id=row] and get value input[type=text id=column]
-function palygame() {
+function playgame() {
     var rows = document.getElementById("row").value;
     var columns = document.getElementById("column").value;
     // gán kết quả trả về của hàm render cho thuộc tính innerHTML của div id=main
