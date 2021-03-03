@@ -23,3 +23,9 @@ function playgame() {
     // gán kết quả trả về của hàm render cho thuộc tính innerHTML của div id=main
     document.getElementById("main").innerHTML = render(rows,columns);
 }
+
+function tbc(a,b) {
+    var c = (a+b)/2;
+    console.log(c);
+}
+tbc(5,10);
