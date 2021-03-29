@@ -23,3 +23,21 @@ function playgame() {
     // gán kết quả trả về của hàm render cho thuộc tính innerHTML của div id=main
     document.getElementById("main").innerHTML = render(rows,columns);
 }
+var Player1 = {
+    color: 'red',
+    name: 'Player1',
+    id: 1
+}
+
+var Player2 = {
+    color: 'black',
+    name: 'Player2',
+    id: 2
+}
+
+var  = {
+    position(x, y),
+    type = player1,
+        
+}
+
