@@ -1,9 +1,8 @@
 body {
     margin: 0;
     text-align:center;
-    font-family: 'Merriweather',
-    serif;
-    background-color: #fbfffe;
+    font-family: 'Merriweather', serif;
+    /* background-color: #fbfffe; */
 }
 
 h1 {
@@ -54,7 +53,8 @@ a:hover {
 }
 
 .footer {
-    background-color: #e4f9f5;
+    background-color: #F6F6F6;
+    
 }
 
 .top-container {
@@ -68,16 +68,18 @@ a:hover {
 }
 
 .code-img {
-    width: 300px;
-    border-radius: 50px;
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+    border-radius: 50%;
 }
 
 .hot-wings {
-    width: 250px;
+    width: 25%;
+    float: right;
+    margin-left: 30px;
     border-radius: 50%;
-    position: relative;
-    left: 700px;
-    top: 200px;
+
 }
 
 .bottom-container {
@@ -89,6 +91,7 @@ a:hover {
     width: 50%;
     margin: 100px auto 100px auto;
     text-align: left;
+    line-height: 2;
 }
 
 .pro {
