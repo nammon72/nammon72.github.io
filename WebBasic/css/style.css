@@ -82,6 +82,14 @@ a:hover {
 
 }
 
+.code-skill-description {
+    clear: left;
+}
+
+.chilli-skill-description {
+    clear: left;
+}
+
 .bottom-container {
     background-color: #66bfbf;
     padding: 50px 0 20px;
