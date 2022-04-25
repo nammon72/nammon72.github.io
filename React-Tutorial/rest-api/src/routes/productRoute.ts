@@ -3,7 +3,7 @@ import productCtrl from '../controllers/productCtrl'
 import{ checkProductData } from '../middleware/validate'
 
 const router = express.Router()
-
+// C.R.U.D (Create, Read, Update, Delete)
 router.get('/products', productCtrl.getProducts)
 
 router.get('/products/:id', productCtrl.getProduct)

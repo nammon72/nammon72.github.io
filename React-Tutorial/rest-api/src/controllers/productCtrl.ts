@@ -4,7 +4,12 @@ import Products from '../models/productModel'
 const productCtrl = {
     getProducts: async (req, res) => {
         try {
-            const products = await Products.find()
+            console.log(req.query)
+            const page = req.query.page * 1 || 1;
+            const limit = req.query.limit * 1 || 5;
+            const sort = req.query.sort * 1 || 'createdAt';
+            const skip = limit * (page -1)
+            const products = await Products.find().limit(limit).skip(skip).sort(sort)
             return res.status(200).json(products)
         }   catch (err) {
             return res.status(500).json({msg: err.message})
