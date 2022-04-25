@@ -3,9 +3,9 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import morgan from 'morgan'
+import routes from './routes'
 
 dotenv.config()
-
 const app = express()
 
 // middleware
@@ -25,9 +25,8 @@ mongoose.connect(URL, {
 })
 
 // Routes
-app.get('/', (req, res) => {
-    res.json({msg: 'Hello nammon72'})
-})
+app.use('/api', routes) 
+
 
 // Start server Listening
 const port = process.env.PORT || 5000;
