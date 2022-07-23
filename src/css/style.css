@@ -1,81 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-@font-face {
-  font-family: digital-7;
-  src: url('/src/fonts/digital-7.ttf') format('truetype');
+  font-family: Gotham Rounded, sans-serif;
   font-weight: normal;
-  font-style: normal;
 }
 
 body {
-  font-family: digital-7;
-  background-color: #3c4043;
+  padding: 0;
+  margin: 0;
+  background: #696969;
 }
 
-.cal {
-  margin: 10px auto;
-  width: 200px;
-}
-
-.screen {
-  overflow: hidden;
-  background-color: white;
-  width: 100%;
-  height: 50px;
-  position: relative;
-}
-
-.keyboard {
-  width: 100%;
+.calculator-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  color: #ffffff;
-  background-color: #A2B5BB;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.item {
-  height: 50px;
-  outline: none;
-  border: 0.1px solid rgb(212, 212, 212);
-}
-
-.item:hover {
-  background-color: rgb(182, 182, 182);
+.calculator-grid > button {
   cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(160, 158, 158);
+  outline: none;
+  color:azure;
+  background-color: rgba(68, 68, 68, .75);
 }
 
-.item-01 {
-  grid-column: 1/span 2;
-  background-color: hotpink;
+.calculator-grid > button:hover {
+  background-color: rgba(68, 68, 68, .9);
 }
 
-.item-01:hover {
-  background-color: rgb(221, 71, 146);
+.span-two {
+  grid-column: span 2;
 }
 
-.item-02 {
-  background-color: rgb(255, 158, 206);
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(20, 20, 20, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.item-02:hover {
-  background-color: rgb(255, 104, 180);
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
 }
 
-.screen .input,
-.screen .overlay {
-  position: absolute;
-  top: 0;
-  right: 5px;
-  font-size: 40px;
-  color: #3c4043;
-  z-index: 222;
-  font-family: digital-7;
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
 }
 
-.screen .overlay {
-  background-color: rgb(211, 209, 209, 0.7);
+/* Mobile Screen */
+@media only screen and (max-width: 768px) {
+  .calculator-grid{
+    width: 100%;
+  }
 }
+
+/* Tablet Screen */
+@media only screen and (min-with: 768px) and (max-width:1039) {
+  .calculator-grid{
+    width: 50%;
+  }
+}
+
+/* Desktop Screen */
+@media only screen and (min-with: 1024) {
+  .calculator-grid {
+    width: 100%;
+  }
+}
+
