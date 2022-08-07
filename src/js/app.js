@@ -148,29 +148,6 @@ class Calculator {
     console.log(key);
     if (isNaN(key)) {
       switch (key) {
-        // case "c":
-        // case "Backspace":
-        // case "Delete":
-        //   resetDisplay();
-        //   value = "";
-        //   break;
-        // case "±":
-        //   if (val.startsWith("-")) {
-        //     display.value = val.substr(1, val.length);
-        //   } else {
-        //     display.value = "-" + val;
-        //   }
-        //   break;
-        // case ".":
-        //   if (val === "" || val === "-") {
-        //     display.value += "0.";
-        //   } else {
-        //     display.value += ".";
-        //   }
-        //   break;
-        // case "%":
-        //   display.value = val / 100;
-        //   break;
         case "+":
           console.log(key);
           self.chooseOperation("+");
@@ -188,8 +165,10 @@ class Calculator {
           self.chooseOperation("÷");
           break;
         case "Enter":
-          console.log("HELLO");
-          //self.compute();
+          self.compute();
+          break;
+        case "Backspace":
+          self.delete();
           break;
       }
     } else {
@@ -201,7 +180,7 @@ class Calculator {
   }
 }
 
-let keys = document.querySelectorAll(".key");
+// let keys = document.querySelectorAll(".key");
 const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
 const equalsButton = document.querySelector("[data-equals]");
@@ -242,10 +221,12 @@ equalsButton.addEventListener("click", (button) => {
 allClearButton.addEventListener("click", (button) => {
   calculator.clear();
   calculator.clearDisplay();
+  allClearButton.blur();
 });
 
 deleteButton.addEventListener("click", (button) => {
   calculator.delete();
+  deleteButton.blur();
   // calculator.updateDisplay();
 });
 window.addEventListener("keydown", function (e) {
