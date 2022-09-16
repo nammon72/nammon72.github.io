@@ -15,6 +15,10 @@ button {
     width: 30px;
     height: 30px;
     background-color: yellowgreen;
+    cursor: pointer;
+}
+button:hover{
+  background-color: #555;
 }
 #play {
     width: 80px;
@@ -23,4 +27,8 @@ button {
 }
 body {
     background-color: aquamarine;
+}
+#main {
+    display: block;
+    text-align: center;
 }
